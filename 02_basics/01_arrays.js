@@ -1,6 +1,7 @@
 // Arrays in JavaScript
 
 const myArr = [2,5,8,9,12,28]
+const newARR = [4,5,"Yuvraj",true];
 // console.log(myArr[4]);
 // Array can contain different values such as Numbers, boolean , Strings , objects and other Arrays as well
 //  Array methods

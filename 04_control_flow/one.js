@@ -53,3 +53,17 @@ const temperature = 41
 // if (loggedInFromGoogle || loggedInFromEmail) {
 //     console.log("User logged in");
 // }
+
+// var age = 23
+// console.log(age<18 ? "you cannot vote" : "you can vote")        //one liner
+// console.log(age < 17 ? "You cannot drive." : ( age == 17 ? "Go to driving school." : "You can drive."));        //multiple if else
+
+
+if('hel'=='the'){
+    console.log("hello yuvi");
+}
+else{
+    console.log("wrong");
+}
+//  If two values are of different data types, they are converted to be the same data type first. After conversion, their values are then compared
+// if we are comparing a numeric value to string if the string has a numeric value then it will converted to that numeric value otw it has non numeric values then it will be converted to NaN ...

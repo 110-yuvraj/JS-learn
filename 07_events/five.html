@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        div{
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <button id="mode">change mode</button>
+    <button id="btn1">click me!</button>
+    <button ondblclick="console.log('button was clicked 2x')">click me 2 times</button>
+    <div>This is a box</div>
+    <script>
+        let btn1 = document.querySelector("#btn1");
+        btn1.onclick = ()=>{
+            console.log("btn1 was clicked");
+            let a = 25;
+            a++;
+            console.log(a)
+        }
+        let div = document.querySelector("div");
+        div.onmouseover = ()=>{
+            console.log("You are inside the box");
+        };
+        
+        let modebtn = document.querySelector("#mode");
+        let currMode = "light";
+        modebtn.addEventListener("click",()=>{
+            if(currMode=="light"){
+                currMode = "dark";
+                // document.querySelector("body").style.backgroundColor = "black";
+                document.querySelector("body").classList.add("dark");
+                document.querySelector("body").classList.remove("light");
+            }
+            else{
+                currMode = "light";
+                // document.querySelector("body").style.backgroundColor = "white";
+                document.querySelector("body").classList.add("light");
+                document.querySelector("body").classList.remove("dark");
+            }
+            console.log(currMode);
+        })
+        </script>
+</body>
+</html>

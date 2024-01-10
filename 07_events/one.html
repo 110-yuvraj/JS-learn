@@ -37,7 +37,7 @@
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation()              //it is used to stop event bubbling so that it will not propagate to its parent node
     // }, false)
     
     // document.getElementById('google').addEventListener('click',function(e){
@@ -54,8 +54,6 @@
             let removeIt = e.target.parentNode
             removeIt.remove()
         }
-    
-        
     })
     
     //removeIt.parentNode.removeChild(removeIt)

@@ -178,3 +178,35 @@ function newGame() {
   })
 }
 ```
+
+
+### project 5
+```javascript
+const randomColor = function(){
+  const hex = "0123456789ABCDEF"
+  let color = '#'
+  for(let i=0; i<6; i++){
+    color+=hex[Math.floor(Math.random()*16)]
+  }
+  return color;
+};
+// console.log(randomColor);
+// console.log(Math.floor(Math.random()*16))
+let IntervalID;
+const startChanging = function(){
+  if(!IntervalID)
+  IntervalID = setInterval(changeBg,1000)
+  function changeBg(){
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChanging = function(){
+  clearInterval(IntervalID);
+  IntervalID = null;
+};
+const start = document.querySelector("#start").addEventListener('click',startChanging)
+
+const stop = document.querySelector("#stop").addEventListener('click',stopChanging)
+
+```
